@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3><pre>BOSTON HOUSING PRICE PREDICTION</pre></h3>
+
+<div>
+  <form action="/predict" method="POST">
+    <label for="crim">CRIM</label>
+    <input class="form-input" type="text" id="crim" name="crim" placeholder="Enter value for CRIM..">
+<!--    <input type="number" id="crim" name="CRIM" placeholder="Enter Value for CRIM..">-->
+
+    <label for="zn">ZN</label>
+    <input class="form-input" type="text" id="zn" name="zn" placeholder="Enter Value for ZN..">
+
+    <label for="indus">INDUS</label>
+    <input class="form-input" type="text" id="indus" name="indus" placeholder="Enter Value for INDUS..">
+
+    <label for="chas">CHAS</label>
+    <input class="form-input" type="text" id="chas" name="chas" placeholder="Enter Value for CHAS..">
+
+    <label for="nox">NOX</label>
+    <input class="form-input" type="text" id="nox" name="nox" placeholder="Enter Value for NOX..">
+
+    <label for="rm">RM</label>
+    <input class="form-input" type="text" id="rm" name="rm" placeholder="Enter Value for RM..">
+
+    <label for="age">AGE</label>
+    <input class="form-input" type="text" id="age" name="age" placeholder="Enter Value for AGE..">
+
+    <label for="dis">DIS</label>
+    <input class="form-input" type="text" id="dis" name="dis" placeholder="Enter Value for DIS..">
+
+    <label for="rad">RAD</label>
+    <input class="form-input" type="text" id="rad" name="rad" placeholder="Enter Value for RAD..">
+
+    <label for="tax">TAX</label>
+    <input class="form-input" type="text" id="tax" name="tax" placeholder="Enter Value for TAX..">
+
+    <label for="ptratio">PTRATIO</label>
+    <input class="form-input" type="text" id="ptratio" name="ptratio" placeholder="Enter Value for PTRATIO..">
+
+    <label for="b">B</label>
+    <input class="form-input" type="text" id="b" name="b" placeholder="Enter Value for B..">
+
+    <label for="lstat">LSTAT</label>
+    <input class="form-input" type="text" id="lstat" name="lstat" placeholder="Enter Value for LSTAT..">
+
+
+
+    <input type="submit" value="PREDICT PRICE">
+  </form>
+  <br>
+  <br>
+  <h3>{{prediction_text}}</h3>
+</div>
+
+</body>
+</html>
+
+
